@@ -2,7 +2,15 @@
 
 This is a public repo for a code that replaces each word in a sentence with a specific format. Made for JPC 345 code challenge
 
-## Usage
+## Author
+
+Martin Carmona Diaz
+
+## Last update
+
+28/03/2023
+
+## Basic Usage
 
 Requirements should be installed with pip:
 
@@ -15,6 +23,16 @@ The program can be run from the command line in the repository location using th
 To run tests in the command line use the following command:
 
 `python3 -m unittest tests/test_main.py`
+
+## Docker Usage
+
+You should have Docker installed in your machine and build the image with
+
+`docker build -t code-challenge-jpc-345 .`
+
+The program can be run from Docker int the command line in the repository location using the following command:
+
+`docker run --rm code-challenge-jpc-345 --sentence "Hello world! This is an example sentence"`
 
 ## Repository Layout
 
