@@ -10,7 +10,7 @@ def transform_word(word: str) -> str:
     :return: formated word if needed
     """
     # Base case
-    if len(word) <= 2:
+    if not word.isalpha():
         return word
     else:
         # Count how many characters are between the first and the last one.

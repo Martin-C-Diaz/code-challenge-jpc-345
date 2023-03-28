@@ -1,6 +1,6 @@
 import unittest
 
-from app.main import parse_and_transform
+from app.utils import parse_and_transform
 
 
 class TestParseSentence(unittest.TestCase):
@@ -15,13 +15,16 @@ class TestParseSentence(unittest.TestCase):
         self.assertEqual(parse_and_transform("Number2separated"), "N4r2s5d")
 
     def test_word_with_non_alpha_char(self):
-        self.assertEqual(parse_and_transform("Non-alpha,separated"), "N4a,-s5d")
+        self.assertEqual(parse_and_transform("Non-alpha,separated"), "N1n-a3a,s5d")
 
     def test_sentence_with_multiple_separators(self):
         self.assertEqual(
             parse_and_transform("Multiple-separators!in@one#sentence"),
-            "M7e-s9s!i1n@o2e#s7e",
+            "M5e-s6s!i0n@o1e#s4e",
         )
+
+    def test_sentence_with_numbers(self):
+        self.assertEqual(parse_and_transform("The answer is 42"), "T1e a4r i0s 42")
 
     def test_empty_sentence(self):
         self.assertEqual(parse_and_transform(""), "")

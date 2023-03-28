@@ -1,8 +1,9 @@
-from utils import parse_and_transform
+from app.utils import parse_and_transform
 
 if __name__ == "__main__":
     example_sentences = [
         "Smooth",
+        "Multiple-separators!in@one#sentence",
         "Space separated",
         "Dash-separated",
         "Number2separated",
