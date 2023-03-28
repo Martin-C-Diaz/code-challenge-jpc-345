@@ -4,13 +4,17 @@ This is a public repo for a code that replaces each word in a sentence with a sp
 
 ## Usage
 
+Requirements should be installed with pip:
+
+`pip install -r requirements`
+
 The program can be run from the command line in the repository location using the following command:
 
-`python3 -m unittest tests/test_main.py`
+`python3 -m app --sentence "Hello world! This is an example sentence"`
 
 To run tests in the command line use the following command:
 
-`python3 -m app`
+`python3 -m unittest tests/test_main.py`
 
 ## Repository Layout
 
